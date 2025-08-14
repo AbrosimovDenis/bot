@@ -1,7 +1,3 @@
-TOKEN = '6148751415:AAHotoEcZYTXxhQKmepHK8JmxrgOA5AUWe0'
+TOKEN = ""
 
-keys = {
-    'доллар': 'USD',
-    'евро': 'EUR',
-    'рубль': 'RUB'
-}
+keys = {"доллар": "USD", "евро": "EUR", "рубль": "RUB"}
