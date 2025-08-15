@@ -8,6 +8,7 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=["start", "help"])
 def help(message: telebot.types.Message):
+    """Shows start message and help"""
     text = (
         "Чтобы начать работу введите команду боту в формате:\n <имя валюты> "
         "<в какую валюту перевести> <количество переводимой валюты> \n"
@@ -18,10 +19,7 @@ def help(message: telebot.types.Message):
 
 @bot.message_handler(commands=["values"])
 def values(message: telebot.types.Message):
-    text = "Доступные валюты:"
-    for key in keys:
-        text = "\n".join((text, key))
-    bot.reply_to(message, text)
+    bot.reply_to(message, "Доступные валюты:" + "\n".join(keys))
 
 
 @bot.message_handler(content_types=["text"])
