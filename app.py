@@ -19,6 +19,7 @@ def help(message: telebot.types.Message):
 
 @bot.message_handler(commands=["values"])
 def values(message: telebot.types.Message):
+    """Shows currencies"""
     bot.reply_to(message, "Доступные валюты:" + "\n".join(keys))
 
 
